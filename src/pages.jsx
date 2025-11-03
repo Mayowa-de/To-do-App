@@ -5,7 +5,7 @@ import Dashboard from './component/Dashboard'
 import Footer from './component/Footer'
 export default function pages({handleLogOut}) {
   return (
-    <>
+    <div className='flex flex-col gap-5 w-full justify-center items-center'>
       <div className=' justify-center gap-2 w-full flex items-start  flex-col '>
         <div className='flex justify-center items-center w-full bg-cyan-400 md:px-4 p-2'>
         <Header handleLogOut={handleLogOut}/>
@@ -15,6 +15,6 @@ export default function pages({handleLogOut}) {
         <Footer/>
       </div>
        <Dashboard/>
-</>
+</div>
   )
 }

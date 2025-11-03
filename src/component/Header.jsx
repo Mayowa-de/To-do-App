@@ -54,8 +54,8 @@ export default function Header({handleLogOut}) {
          <FaTimes onClick={handleCloseNavbar} className={`${showNavbar ? 'block' : 'hidden' } text-3xl text-white z-50 items-start absolute flex mt-10 ml-2 `}/>
          </div>
         {showNavbar &&(
-         <div className='flex flex-col z-20 gap-5 pb-7 bg-black p-2 rounded-xl absolute mt-8  items-center w-full'>
-            
+         <div className='flex  justify-center absolute mt-8  items-center w-full top-0 left-0'>
+           <div className='flex flex-col bg-black w-full gap-5 px-2 z-50 rounded-xl pb-7 items-center top-0 left-0'>
             <div className='flex flex-col items-center text-white w-full relative'>
             <img src={Profile} alt="profile image" className='rounded-full h-16 w-16 absolute bottom-20' />
             <div className='flex flex-col gap-3 items-center mt-12'>
@@ -71,9 +71,10 @@ export default function Header({handleLogOut}) {
             <li className='flex items-center px-16 gap-5 hover:bg-white rounded-xl hover:text-red-500 hover:p-4 hover:w-full hover:justify-center '><FaLightbulb className='text-2xl'/>My Tasks</li>
             <li className='flex gap-3 px-16 items-center hover:bg-white rounded-xl hover:text-red-500 hover:p-4 hover:w-full hover:justify-center'><MdAdd className='text-2xl'/>Add Task</li>
             <li className='flex gap-3 items-center px-16 hover:bg-white rounded-xl hover:text-red-500 hover:p-4 hover:w-full hover:justify-center'><MdViewModule/>Tasks Categories </li>
-            <li className='flex gap-3 items-center px-16 hover:bg-white rounded-xl hover:text-red-500 hover:p-4 hover:w-full hover:justify-center'><MdCalendarToday className='text-2xl'/>Calendar</li>
+            <li onClick={handleShowCalendar} className='flex gap-3 items-center px-16 hover:bg-white rounded-xl hover:text-red-500 hover:p-4 hover:w-full hover:justify-center'><MdCalendarToday className='text-2xl'/>Calendar</li>
             <button className='flex mt-20 items-center px-16 gap-3 hover:bg-white rounded-xl hover:text-red-500 hover:p-4 hover:w-full hover:justify-center' onClick={handleLogOut}><FaSignOutAlt className='text-2xl'/>LogOut</button>
         </ul>
+        </div>
         </div>
          )}
         </div>

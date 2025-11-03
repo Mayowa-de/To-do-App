@@ -24,11 +24,13 @@ function App() {
             setIsAuthenticated(false)
         }
   return (
-      <div className="h-full justify-center flex items-center bg-gray-100 px-2 w-full">
+      <div className="h-full justify-center flex items-center bg-gray-100  w-full">
         <BrowserRouter>
           <Routes>
-            <Route path='/'  element={isAuthenticated ? <Navigate to='/login'/> :  <Pages handleLogOut={handleLogOut}/>} />
-            <Route path='/login' element={<Login handleLogin={handleLogin} />} />
+            {/* When authenticated show Pages at /, otherwise go to /login */}
+            <Route path='/' element={isAuthenticated ? <Pages handleLogOut={handleLogOut}/> : <Navigate to='/login' />} />
+            {/* If already authenticated, visiting /login should redirect to home */}
+            <Route path='/login' element={isAuthenticated ? <Navigate to='/' /> : <Login handleLogin={handleLogin} />} />
           </Routes>
         </BrowserRouter>
       </div>
