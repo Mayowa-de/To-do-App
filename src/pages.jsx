@@ -1,6 +1,5 @@
-import React from 'react'
 import Navbar from './component/Navbar'
-import Header from './component/Header'
+import Header from './component/HeaderPart/Header'
 import Dashboard from './component/Dashboard'
 import Footer from './component/Footer'
 export default function pages({handleLogOut}) {
@@ -14,7 +13,9 @@ export default function pages({handleLogOut}) {
         <Navbar/>
         <Footer/>
       </div>
+      <div className='flex items-center justify-center w-full px-4'>
        <Dashboard/>
+       </div>
 </div>
   )
 }
