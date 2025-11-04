@@ -26,7 +26,7 @@ function App() {
             setIsAuthenticated(false)
         }
   return (
-      <div className="min-h-screen  flex items-center bg-slate-200/50 px-1   w-full">
+      <div className="h-full flex items-center bg-slate-200/50 px-1   w-full">
         <BrowserRouter>
           <Routes>
             {/* When authenticated show Pages at /, otherwise go to /login */}
