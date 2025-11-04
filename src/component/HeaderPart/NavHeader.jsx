@@ -27,24 +27,24 @@ export default function NavHeader({ handleLogOut }) {
                     </div>
 
                     <ul className='flex flex-col   gap-5 text-white text-xl px-2 mx-12 font-bold w-full items-center justify-center'>
-                        <div className='flex gap-5 bg-white p-3 rounded-xl w-full text-red-500 justify-center items-center'>
-                            <MdDashboard className='text-2xl items-start' />
+                        <div className='flex gap-7 hover:bg-white p-3 rounded-xl hover:w-full text-white hover:text-red-500 justify-center items-center'>
+                            <MdDashboard className='text-2xl -ml-10' />
                         <li className='font-bold'  >Dashboard</li>
                         </div>
-                        <div className='flex items-center rounded-xl p-3  hover:text-red-500 text-white hover:bg-white gap-6 justify-center hover:w-full'>
-                            <FaLightbulb className='text-2xl items-start' />
+                        <div className='flex items-center rounded-xl p-3  hover:text-red-500 text-white hover:bg-white gap-10 justify-center hover:w-full '>
+                            <FaLightbulb className='text-2xl -ml-10' />
                         <li className='font-bold'>My Tasks</li>
                         </div>
-                        <div className='flex gap-5 rounded-xl p-3 hover:bg-white hover:text-red-500 text-white items-center justify-center hover:w-full'>
-                            <MdAdd className='text-2xl' />
+                        <div className='flex gap-10 rounded-xl p-3 hover:bg-white hover:text-red-500 text-white items-center justify-center hover:w-full'>
+                            <MdAdd className='text-2xl -ml-10' />
                         <li className='font-bold'>Add Task</li>
                         </div>
                         <div className='flex items-center hover:w-full hover:bg-white text-white rounded-xl gap-5 p-3 hover:text-red-500 justify-center'>
                             <MdViewModule />
                         <li className='font-bold'>Tasks Categories </li>
                         </div>
-                        <div className='flex items-center hover:bg-white hover:text-red-500 rounded-xl p-3 justify-center hover:w-full gap-5'>
-                            <MdCalendarToday className='text-2xl' />
+                        <div className='flex items-center hover:bg-white hover:text-red-500 rounded-xl p-3 justify-center hover:w-full gap-10'>
+                            <MdCalendarToday className='text-2xl -ml-10' />
                         <li onClick={handleShowCalendar} className='font-bold'>Calendar</li>
                         </div>
                         <div className='flex items-center hover:bg-white p-3 hover:text-red-500 hover:w-full gap-5 justify-center rounded-xl mt-12'>
