@@ -4,7 +4,7 @@ import 'react-calendar/dist/Calendar.css'
 import { FaSearch, FaBell,FaQrcode,  FaTimes } from 'react-icons/fa'
 import NavHeader from './NavHeader'
 
-export default function Header() {
+export default function Header({handleLogOut}) {
     const [showCalendar, setShowCalendar] = useState(false)
     const [showNavbar,setShowNavbar] = useState(false)
     const [date,setDate] = useState(new Date())
@@ -50,10 +50,12 @@ export default function Header() {
         <div className='relative flex flex-col w-full items-end'>
         <button onClick={handleShowNavbar} className={`${showNavbar ? 'hidden' : 'block'} text-3xl font-bold md:hidden z-30`}>&#9776;</button>
         <div className='flex relative items-start w-full'>
-         <FaTimes onClick={handleCloseNavbar} className={`${showNavbar ? 'block' : 'hidden' } text-3xl text-white z-30 items-start absolute flex mt-10 ml-2 `}/>
+         <FaTimes onClick={handleCloseNavbar} className={`${showNavbar ? 'block' : 'hidden' } text-3xl text-white z-30 items-start absolute flex mt-10 -ml-10 left-0`}/>
          </div>
         {showNavbar &&(
-          <NavHeader/>
+          <div className='flex absolute'>
+          <NavHeader handleLogOut={handleLogOut}/>
+          </div>
          )}
         </div>
         </div>

@@ -14,7 +14,7 @@ export default function SignUp({loginPage}) {
         navigate('/login')
     }
     return (
-        <div className='flex justify-center items-center w-full flex-col px-4 mt-10'>
+        <div className='flex justify-center items-center w-full flex-col px-4 mt-10 gap-4'>
             <div className='flex flex-col gap-10 w-full'>
                 <TextField id='name' label='Name' variant='outlined' type='text' value={name} onChange={(e) => setEmail(e.target.value)} />
                 <TextField id='email' label='Email' variant='outlined' type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -22,7 +22,7 @@ export default function SignUp({loginPage}) {
                 <Button variant='contained' onClick={onLogin} className='h-12'>Sign up</Button>
             </div>
             <div className='flex justify-center items-center'>
-                <p>Already have an account? <a href="#" className='text-blue-500 underline'>Login</a></p>
+                <p>Already have an account? <a href="login" className='text-blue-500 underline'>Login</a></p>
             </div>
 
         </div>

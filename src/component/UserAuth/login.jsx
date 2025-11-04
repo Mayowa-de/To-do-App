@@ -56,7 +56,7 @@ export default function Login({ handleLogin }) {
             </Dialog>
           </section>
           <div className='flex justify-center items-center'>
-            <p>Don't have an account? <a href="#" className='text-blue-500 underline'>Sign up</a></p>
+            <p>Don't have an account? <a href="/signup" className='text-blue-500 underline'>Sign up</a></p>
           </div>
 
         </div>
